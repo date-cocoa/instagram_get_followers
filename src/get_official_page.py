@@ -3,6 +3,10 @@ from selenium import webdriver
 import chromedriver_binary
 import get_instagram_info
 import yaml
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 data = pd.read_csv('../data/data_official.csv')
 url_home = 'https://www.instagram.com'
@@ -20,5 +24,6 @@ URL_TARGET = config['target']
 followers_getter = get_instagram_info.GetterInstagramFollower(PHONE_NUMBER, PASSWORD)
 followers_getter.login()
 
-for url in urls:
+for idx, url in enumerate(urls):
     followers_getter.get_page(url)
+    logger.info(f"{idx} / {len(url)}")
