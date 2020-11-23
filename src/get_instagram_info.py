@@ -94,6 +94,11 @@ class GetterInstagramFollower:
         })
 
         data.to_csv('../data/data.csv')
+    
+    def get_page(self, url):
+        self.driver.execute_script("window.open()")
+        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.get(url)
 
 if __name__ == '__main__':
     with open('../conf/config.yml') as f:
