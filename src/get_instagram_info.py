@@ -38,6 +38,7 @@ class GetterInstagramFollower:
         self.driver.get(url_target)
         time.sleep(3)
         self.driver.find_element_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[3]').click()
+        time.sleep(3)
         follower_popup = self.driver.find_element_by_css_selector('body > div.RnEpo.Yx5HN > div > div > div.isgrP')
 
         follower_list_text_prev = 'start'
