@@ -26,4 +26,4 @@ followers_getter.login()
 
 for idx, url in enumerate(urls):
     followers_getter.get_page(url)
-    logger.info(f"{idx} / {len(url)}")
+    logger.info(f"{idx} / {len(urls)}")
