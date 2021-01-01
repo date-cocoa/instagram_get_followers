@@ -31,8 +31,8 @@ class GetterInstagramFollower:
         self.driver.find_element_by_id('loginbutton').click()
         time.sleep(3)
         
-        self.driver.find_element_by_name('__CONFIRM__').click()
-        time.sleep(3)
+        # self.driver.find_element_by_name('__CONFIRM__').click()
+        # time.sleep(3)
 
     def get_target_follower_raw(self, url_target):
         self.driver.get(url_target)
